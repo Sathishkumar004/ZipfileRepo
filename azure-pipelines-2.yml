@@ -1,0 +1,17 @@
+
+trigger:
+- main # or the name of your main branch
+
+
+steps:
+# Prepare Analysis Configuration task
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: 'localhost:9000'
+    scannerMode: 'Other'
+    extraProperties: 'sonar.projectKey=Test2_Test2_AYpgOxPd2I47_WaNH072'
+
+# Publish Quality Gate Result task
+- task: SonarQubePublish@5
+  inputs:
+    pollingTimeoutSec: '300'
