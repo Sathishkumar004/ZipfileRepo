@@ -26,4 +26,4 @@ steps:
     buildType: 'current'
     downloadType: 'single'
     artifactName: 'drop'
-    downloadPath: '$(C:\Users\Sathish\Testing)'
+    downloadPath: '$("C:\Users\Sathish\Testing")'
