@@ -31,7 +31,7 @@ steps:
       {
         "files": [
           {
-            "pattern": "artifactory-build-info/",
+            "pattern": "https://sathishkumar007.jfrog.io/ui/builds/?after=1685557800000&type=builds",
             "target": "REPLACE_ME"
           }
         ]
