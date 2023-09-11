@@ -23,21 +23,6 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'install'
 
-- task: JFrogGenericArtifacts@1
-  inputs:
-    command: 
-    specSource: 'taskConfiguration'
-    fileSpec: |
-      {
-        "files": [
-          {
-            "pattern": "***/target/*",
-            "target": "libs-release/"
-          }
-        ]
-      }
-    failNoOp: false
-
 - task: JFrogMaven@1
   inputs:
     mavenPomFile: 'pom.xml'
