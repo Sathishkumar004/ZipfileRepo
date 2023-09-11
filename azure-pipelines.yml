@@ -31,8 +31,8 @@ steps:
       {
         "files": [
           {
-            "pattern": "https://sathishkumar007.jfrog.io/ui/builds/?after=1685557800000&type=builds",
-            "target": "REPLACE_ME"
+            "pattern": "$(Pipeline.Workspace)/*.jar",
+            "target": "$(repository-name)"
           }
         ]
       }
