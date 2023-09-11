@@ -37,4 +37,11 @@
     <!-- The output .war file's name, which will be the name of the webapp. -->
     <finalName>${project.artifactId}</finalName>
   </build>
+    <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>a0k16s4caj7ne-artifactory-primary-0-releases</name>
+        <url>https://sathishkumar007.jfrog.io/artifactory/libs-release</url>
+    </repository>
+    </distributionManagement>
 </project>
