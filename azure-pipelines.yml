@@ -22,18 +22,11 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'install'
 
-- task: JFrogGenericArtifacts@1
+- task: JFrogMaven@1
   inputs:
-    command: 'Upload'
-    connection: 'Jfrog'
-    specSource: 'taskConfiguration'
-    fileSpec: |
-      {
-        "files": [
-          {
-            "pattern": "$(Pipeline.Workspace)/*.jar",
-            "target": "$(repository-name)"
-          }
-        ]
-      }
-    failNoOp: true
+    mavenPomFile: 'pom.xml'
+    goals: 'install'
+    artifactoryDeployService: 'Jfrog'
+    targetDeployReleaseRepo: 'libs-release'
+    targetDeploySnapshotRepo: 'libs-release'
+    javaHomeOption: 'JDKVersion'
